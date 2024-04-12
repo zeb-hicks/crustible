@@ -1,0 +1,81 @@
+:root {
+    background: #000;
+    background-image: url('assets/bg.png');
+    background-repeat: repeat;
+    color: #ddd;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+video {
+    border-radius: 6px;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.outer {
+    display: flex;
+    flex-direction: column;
+}
+
+.upper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lower {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    padding: 8px;
+    border-radius: 12px;
+    background: #222;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.0), 0 24px 64px rgba(0, 0, 0, 1.0);
+    margin: 8px;
+    text-align: center;
+    transition: background 300ms, box-shadow 300ms;
+}
+
+.avatar-frame {
+    width: 64px;
+    height: 64px;
+    border: 2px solid #000;
+    border-radius: 100%;
+    position: relative;
+    margin: 12px 32px;
+}
+
+.avatar-frame::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border: 4px solid #c00;
+    border-radius: 100%;
+}
+
+.avatar-frame img {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+a:hover .card {
+    background: #333;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 1.0), 0 24px 64px rgba(0, 0, 0, 1.0);
+}
